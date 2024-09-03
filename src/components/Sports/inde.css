@@ -1,0 +1,24 @@
+.sports-container{
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    margin-top: 2em;
+    width: 100%;
+    height: 600px;
+    text-align: center;
+    color: #606365;
+}
+
+.sports-image{
+    width: 500px;
+    height: 500px;
+}
+
+.sports-container h1{
+    color: #021130;
+}
+
+@media  (max-width:767px) {
+    .sports-image{
+        width:400px;
+        height: 400px
+    }
+}

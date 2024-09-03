@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Menu from "./components/Menu";
+import Settings from "./components/Settings";
+import { LanguageProvider } from "./context";
+import Home from "./components/Home";
+import Movie from "./components/Movies";
+import TvShows from "./components/Tvshows";
+import Sports from "./components/Sports";
+import Live from "./components/Live";
+import './App.css'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <LanguageProvider>
+    <BrowserRouter>
+        <div className="app">
+          <div className="header-container">
+            <Settings/>
+            <Menu/>
+          </div>
+          <Switch>
+            <Route exact path="/"  component = {Home}/>
+            <Route exact path="/movies" component = {Movie}/>
+            <Route exact path="/tv-shows" component={TvShows} />
+            <Route exact path="/sports" component={Sports} />
+            <Route exact path="/live" component={Live} />
+          </Switch>
+          </div>
+    </BrowserRouter>
+  </LanguageProvider>
   );
 }
 

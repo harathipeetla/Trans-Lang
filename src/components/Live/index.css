@@ -1,0 +1,25 @@
+.live-container{
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    margin-top: 2em;
+    height: 600px;
+    width: 100%;
+    text-align: center;
+    color: #676b6e;
+}
+
+.live-image{
+    width: 500px;
+    height: 500px;
+}
+
+.live-container h1{
+    color: #021130;
+}
+
+
+@media  (max-width:767px) {
+    .live-image{
+        width:400px;
+        height: 400px
+    }
+}
